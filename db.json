@@ -30,5 +30,37 @@
       "Brand": "Nothing",
       "id": 5
     }
+  ],
+  "cart": [
+    {
+      "prodName": "Watch",
+      "price": "25000",
+      "Brand": "Apple",
+      "id": 6
+    },
+    {
+      "prodName": "NothingOne",
+      "price": "30000",
+      "Brand": "Nothing",
+      "id": 5
+    },
+    {
+      "prodName": "S22 Ultra",
+      "price": "98000",
+      "Brand": "Samsung",
+      "id": 4
+    },
+    {
+      "id": 2,
+      "prodName": "iphone13",
+      "price": 65000,
+      "Brand": "Apple"
+    },
+    {
+      "id": 1,
+      "prodName": "iphone12",
+      "price": "50000",
+      "Brand": "Apple"
+    }
   ]
 }

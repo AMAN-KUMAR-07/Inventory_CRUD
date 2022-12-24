@@ -18,7 +18,10 @@ export const Navbar = () => {
               <Link to={'/addProduct'} class="nav-link active" aria-current="page" href="#">Add Product</Link>
             </li>
             <li class="nav-item">
-              <Link to={'/viewProduct'} class="nav-link active" aria-current="page" href="#">Products</Link>
+              <Link to={'/admin/viewProduct'} class="nav-link active" aria-current="page" href="#">Products</Link>
+            </li>
+            <li class="nav-item">
+              <Link to={'/cart'} class="nav-link active" aria-current="page" href="#">Cart</Link>
             </li>
           </ul>
         </div>

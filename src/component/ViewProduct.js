@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom';
+import { Link, useFetcher } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 
 export const ViewProduct = () => {
@@ -26,6 +27,23 @@ export const ViewProduct = () => {
       return item.id !== id;
     })
     setProducts(newproduct);
+  }
+
+  const handleAddition = async id=>{
+    console.log(id);
+    try{
+      const products = await axios.get(`http://localhost:3004/products/${id}`)
+      try{
+        // console.log("data is fetched")
+        // console.log(products.data);
+        await axios.post(`http://localhost:3004/cart`, products.data)
+        alert("Product Added to cart")
+      } catch (error){
+        console.log("unable to post in Cart")
+      }
+    } catch (error) {
+      console.log("unable to fetch product");
+    }
   }
 
   return (
@@ -60,6 +78,7 @@ export const ViewProduct = () => {
                         </button>
                       </Link>
                       <button type="button" class="btn btn-danger" onClick={() => handleDelete(product.id)}>Delete</button>
+                      <button type="button" class="btn btn-success" onClick={() => handleAddition(product.id)}>Add2Cart</button>
                     </td>
                   </tr>
                 )
